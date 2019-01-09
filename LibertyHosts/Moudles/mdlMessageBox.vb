@@ -2,24 +2,24 @@
     Function MessageBox(varText As String, Optional varTitle As String = "", Optional var2Button As Boolean = False)
         formMessageBox.TextLabel.Text = varText
 
-        If formMessageBox.TextLabel.Width + 20 >= formMessageBox.Width Then '如果宽度超出窗口则扩大窗口
+        If formMessageBox.TextLabel.Width + 20 >= formMessageBox.Width Then
             formMessageBox.Width = formMessageBox.TextLabel.Width + 100
         End If
-        If formMessageBox.TextLabel.Height + 100 >= formMessageBox.Height Then '如果高度超出窗口则扩大窗口
+        If formMessageBox.TextLabel.Height + 100 >= formMessageBox.Height Then
             formMessageBox.Height = formMessageBox.TextLabel.Height + 100
         End If
-        formMessageBox.TextLabel.Left = (formMessageBox.Width - formMessageBox.TextLabel.Width) \ 2 '文字居中
-        formMessageBox.OKButton.Top = (formMessageBox.Height - formMessageBox.OKButton.Height - 12) '按钮始终在下面
-        formMessageBox.CloseButton.Left = (formMessageBox.Width - 50) '退出按钮始终在右侧
+        formMessageBox.TextLabel.Left = (formMessageBox.Width - formMessageBox.TextLabel.Width) \ 2
+        formMessageBox.OKButton.Top = (formMessageBox.Height - formMessageBox.OKButton.Height - 12)
+        formMessageBox.CloseButton.Left = (formMessageBox.Width - 50)
 
         If var2Button = False Then
             formMessageBox.NoButton.Visible = False
-            formMessageBox.OKButton.Left = (formMessageBox.Width - formMessageBox.OKButton.Width) \ 2 '按钮居中
+            formMessageBox.OKButton.Left = (formMessageBox.Width - formMessageBox.OKButton.Width) \ 2
         Else
             formMessageBox.NoButton.Visible = True
         End If
         If varTitle = "" Then
-            varTitle = "LibertyHosts 运行时出错"
+            varTitle = "LibertyHosts Error"
         End If
 
         formMessageBox.TitleLabel.Text = varTitle

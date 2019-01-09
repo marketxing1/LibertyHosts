@@ -36,7 +36,8 @@ Partial Class formToolbox
         'MinimizeButton
         '
         Me.MinimizeButton.Image = Global.LibertyHosts.My.Resources.Resources.MinimizeW
-        Me.MinimizeButton.Location = New System.Drawing.Point(176, 0)
+        Me.MinimizeButton.Location = New System.Drawing.Point(264, 0)
+        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MinimizeButton.Name = "MinimizeButton"
         Me.MinimizeButton.Size = New System.Drawing.Size(50, 40)
         Me.MinimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -46,7 +47,8 @@ Partial Class formToolbox
         'CloseButton
         '
         Me.CloseButton.Image = Global.LibertyHosts.My.Resources.Resources.CloseW
-        Me.CloseButton.Location = New System.Drawing.Point(226, 0)
+        Me.CloseButton.Location = New System.Drawing.Point(339, 0)
+        Me.CloseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(50, 40)
         Me.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -56,57 +58,61 @@ Partial Class formToolbox
         'ViewHostsButton
         '
         Me.ViewHostsButton.BackColor = System.Drawing.Color.White
-        Me.ViewHostsButton.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.ViewHostsButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ViewHostsButton.ForeColor = System.Drawing.Color.Black
-        Me.ViewHostsButton.Location = New System.Drawing.Point(46, 66)
+        Me.ViewHostsButton.Location = New System.Drawing.Point(69, 99)
+        Me.ViewHostsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ViewHostsButton.Name = "ViewHostsButton"
-        Me.ViewHostsButton.Size = New System.Drawing.Size(182, 51)
+        Me.ViewHostsButton.Size = New System.Drawing.Size(273, 76)
         Me.ViewHostsButton.TabIndex = 4
-        Me.ViewHostsButton.Text = "访问Hosts文件夹"
+        Me.ViewHostsButton.Text = "Explorer Hosts Folder"
         Me.ViewHostsButton.UseVisualStyleBackColor = False
         '
         'EditHosts
         '
         Me.EditHosts.BackColor = System.Drawing.Color.White
-        Me.EditHosts.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.EditHosts.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.EditHosts.ForeColor = System.Drawing.Color.Black
-        Me.EditHosts.Location = New System.Drawing.Point(46, 139)
+        Me.EditHosts.Location = New System.Drawing.Point(69, 208)
+        Me.EditHosts.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EditHosts.Name = "EditHosts"
-        Me.EditHosts.Size = New System.Drawing.Size(182, 51)
+        Me.EditHosts.Size = New System.Drawing.Size(273, 76)
         Me.EditHosts.TabIndex = 5
-        Me.EditHosts.Text = "编辑Hosts文件"
+        Me.EditHosts.Text = "Edit Hosts File"
         Me.EditHosts.UseVisualStyleBackColor = False
         '
         'CleanHosts
         '
         Me.CleanHosts.BackColor = System.Drawing.Color.White
-        Me.CleanHosts.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.CleanHosts.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.CleanHosts.ForeColor = System.Drawing.Color.Black
-        Me.CleanHosts.Location = New System.Drawing.Point(46, 212)
+        Me.CleanHosts.Location = New System.Drawing.Point(69, 318)
+        Me.CleanHosts.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CleanHosts.Name = "CleanHosts"
-        Me.CleanHosts.Size = New System.Drawing.Size(182, 51)
+        Me.CleanHosts.Size = New System.Drawing.Size(273, 76)
         Me.CleanHosts.TabIndex = 6
-        Me.CleanHosts.Text = "停止自由上网"
+        Me.CleanHosts.Text = "Restore Hosts File"
         Me.CleanHosts.UseVisualStyleBackColor = False
         '
         'About
         '
         Me.About.BackColor = System.Drawing.Color.White
-        Me.About.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.About.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.About.ForeColor = System.Drawing.Color.Black
-        Me.About.Location = New System.Drawing.Point(44, 285)
+        Me.About.Location = New System.Drawing.Point(66, 428)
+        Me.About.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.About.Name = "About"
-        Me.About.Size = New System.Drawing.Size(182, 51)
+        Me.About.Size = New System.Drawing.Size(273, 76)
         Me.About.TabIndex = 7
-        Me.About.Text = "关于"
+        Me.About.Text = "About"
         Me.About.UseVisualStyleBackColor = False
         '
         'formToolbox
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(275, 382)
+        Me.ClientSize = New System.Drawing.Size(412, 573)
         Me.Controls.Add(Me.About)
         Me.Controls.Add(Me.CleanHosts)
         Me.Controls.Add(Me.EditHosts)
@@ -116,6 +122,7 @@ Partial Class formToolbox
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "formToolbox"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmToolbox"

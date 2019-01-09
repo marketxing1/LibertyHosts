@@ -38,48 +38,52 @@ Partial Class formMain
         'GetHostsButton
         '
         Me.GetHostsButton.BackColor = System.Drawing.Color.White
-        Me.GetHostsButton.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.GetHostsButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.GetHostsButton.ForeColor = System.Drawing.Color.Black
-        Me.GetHostsButton.Location = New System.Drawing.Point(13, 254)
+        Me.GetHostsButton.Location = New System.Drawing.Point(20, 381)
+        Me.GetHostsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GetHostsButton.Name = "GetHostsButton"
-        Me.GetHostsButton.Size = New System.Drawing.Size(182, 51)
+        Me.GetHostsButton.Size = New System.Drawing.Size(273, 76)
         Me.GetHostsButton.TabIndex = 3
-        Me.GetHostsButton.Text = "自由上网"
+        Me.GetHostsButton.Text = "Update Hosts"
         Me.GetHostsButton.UseVisualStyleBackColor = False
         '
         'CheckHostsButton
         '
         Me.CheckHostsButton.BackColor = System.Drawing.Color.White
-        Me.CheckHostsButton.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.CheckHostsButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.CheckHostsButton.ForeColor = System.Drawing.Color.Black
-        Me.CheckHostsButton.Location = New System.Drawing.Point(209, 254)
+        Me.CheckHostsButton.Location = New System.Drawing.Point(314, 381)
+        Me.CheckHostsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CheckHostsButton.Name = "CheckHostsButton"
-        Me.CheckHostsButton.Size = New System.Drawing.Size(182, 51)
+        Me.CheckHostsButton.Size = New System.Drawing.Size(273, 76)
         Me.CheckHostsButton.TabIndex = 4
-        Me.CheckHostsButton.Text = "检查网络状态"
+        Me.CheckHostsButton.Text = "Check Connectivity"
         Me.CheckHostsButton.UseVisualStyleBackColor = False
         '
         'ToolBoxButton
         '
         Me.ToolBoxButton.BackColor = System.Drawing.Color.White
-        Me.ToolBoxButton.Font = New System.Drawing.Font("等线", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.ToolBoxButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ToolBoxButton.ForeColor = System.Drawing.Color.Black
-        Me.ToolBoxButton.Location = New System.Drawing.Point(405, 254)
+        Me.ToolBoxButton.Location = New System.Drawing.Point(608, 381)
+        Me.ToolBoxButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ToolBoxButton.Name = "ToolBoxButton"
-        Me.ToolBoxButton.Size = New System.Drawing.Size(182, 51)
+        Me.ToolBoxButton.Size = New System.Drawing.Size(273, 76)
         Me.ToolBoxButton.TabIndex = 5
-        Me.ToolBoxButton.Text = "进阶选项"
+        Me.ToolBoxButton.Text = "Advanced Options"
         Me.ToolBoxButton.UseVisualStyleBackColor = False
         '
         'Label
         '
         Me.Label.AutoSize = True
         Me.Label.Enabled = False
-        Me.Label.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label.ForeColor = System.Drawing.Color.Gray
-        Me.Label.Location = New System.Drawing.Point(232, 189)
+        Me.Label.Location = New System.Drawing.Point(348, 284)
+        Me.Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label.Name = "Label"
-        Me.Label.Size = New System.Drawing.Size(135, 21)
+        Me.Label.Size = New System.Drawing.Size(201, 31)
         Me.Label.TabIndex = 6
         Me.Label.Text = "Fight For Liberty" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -87,7 +91,8 @@ Partial Class formMain
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.LibertyHosts.My.Resources.Resources.GoogleLogo
-        Me.PictureBox1.Location = New System.Drawing.Point(163, 69)
+        Me.PictureBox1.Location = New System.Drawing.Point(244, 104)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(272, 92)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -97,7 +102,8 @@ Partial Class formMain
         'MinimizeButton
         '
         Me.MinimizeButton.Image = Global.LibertyHosts.My.Resources.Resources.MinimizeW
-        Me.MinimizeButton.Location = New System.Drawing.Point(501, 0)
+        Me.MinimizeButton.Location = New System.Drawing.Point(752, 0)
+        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MinimizeButton.Name = "MinimizeButton"
         Me.MinimizeButton.Size = New System.Drawing.Size(50, 40)
         Me.MinimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -107,7 +113,8 @@ Partial Class formMain
         'CloseButton
         '
         Me.CloseButton.Image = Global.LibertyHosts.My.Resources.Resources.CloseW
-        Me.CloseButton.Location = New System.Drawing.Point(551, 0)
+        Me.CloseButton.Location = New System.Drawing.Point(826, 0)
+        Me.CloseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(50, 40)
         Me.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -116,10 +123,10 @@ Partial Class formMain
         '
         'formMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(598, 328)
+        Me.ClientSize = New System.Drawing.Size(897, 492)
         Me.Controls.Add(Me.Label)
         Me.Controls.Add(Me.ToolBoxButton)
         Me.Controls.Add(Me.CheckHostsButton)
@@ -129,6 +136,7 @@ Partial Class formMain
         Me.Controls.Add(Me.CloseButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "formMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Liberty Hosts"

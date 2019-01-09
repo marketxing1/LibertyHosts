@@ -1,10 +1,10 @@
 ﻿Imports System.Threading
 Public Class formMain
-    Dim thGetHostsFile As Thread '获取Hosts文件的线程
-    Dim thPing As Thread '获取延迟的线程
-    Dim thStatistics As Thread '收集统计信息的线程
+    Dim thGetHostsFile As Thread 'GetHosts
+    Dim thPing As Thread 'GetPing
+    Dim thStatistics As Thread 'GetStatus
 
-    Private varOriginalRegion As Region = Nothing   '用于窗体移动 　　
+    Private varOriginalRegion As Region = Nothing
     Private varFormDragging As Boolean = False
     Private varPointClicked As Point
 
@@ -25,14 +25,13 @@ Public Class formMain
     End Sub
     Private Sub Statistics()
         Try
-            '收集统计信息并检查更新
-            Dim varUpdateInfo As String
-            varUpdateInfo = mdlDownload.subStatistics()
-            If varUpdateInfo <> "" Then
-                varUpdateInfo = "检测到新版本:" & varUpdateInfo & vbNewLine & "点击此处升级"
-                Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varUpdateInfo)
-                Me.Invoke(New subLabelDelegate(AddressOf EnableLabel), varUpdateInfo)
-            End If
+            'Dim varUpdateInfo As String
+            'varUpdateInfo = mdlDownload.subStatistics()
+            'If varUpdateInfo <> "" Then
+            '    varUpdateInfo = varUpdateInfo & vbNewLine & "Click To Update"
+            '    Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varUpdateInfo)
+            '    Me.Invoke(New subLabelDelegate(AddressOf EnableLabel), varUpdateInfo)
+            'End If
         Finally
             thStatistics.Abort()
         End Try
@@ -65,28 +64,28 @@ Public Class formMain
             Dim varInfo As String
             Dim varHostsText As String
             Dim varWriteHosts As Boolean
-            varInfo = "获取Hosts文件中"
+            varInfo = "Downloading Hosts File"
             Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
 
             varHostsText = mdlDownload.funcGetHosts()
             If varHostsText = "" Then
-                varInfo = "获取Hosts文件失败"
+                varInfo = "Fail To Download Hosts File"
                 Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
                 thGetHostsFile.Abort()
                 Exit Sub
             End If
 
-            varInfo = "写入Hosts文件中"
+            varInfo = "Writing The Hosts File"
             Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
             varWriteHosts = mdlFile.funcWirteHosts(varHostsText, True)
 
             If varWriteHosts = False Then
-                varInfo = "写入Hosts文件失败"
+                varInfo = "Fail To WriteThe Hosts File"
                 Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
                 thGetHostsFile.Abort()
                 Exit Sub
             End If
-            varInfo = "Hosts修改完成" & vbNewLine & "请点击''检查网络状态''来验证自由上网是否成功"
+            varInfo = "The Hosts File Has Already Changed" & vbNewLine & "Please Click On 'Check Connectivity' To Make Sure The Hosts File Is Avaliable"
             Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
 
         Catch varExc As Exception
@@ -95,9 +94,9 @@ Public Class formMain
             thGetHostsFile.Abort()
         End Try
     End Sub
-    Private Delegate Sub subLabelDelegate(ByVal varString As String) '自定义一个委托
+    Private Delegate Sub subLabelDelegate(ByVal varString As String)
 
-    Private Sub SetInfo(ByVal Info As String) '与委托相同签名的函数或过程
+    Private Sub SetInfo(ByVal Info As String)
         Me.Label.Text = Info
         Me.Label.Left = (Me.Width - Me.Label.Width) \ 2
     End Sub
@@ -117,10 +116,10 @@ Public Class formMain
 
             varPingReply = mdlPing.funcPing("google.com")
             If varPingReply = -1 Then
-                varInfo = "自由上网失败,无法连接到Google"
+                varInfo = "Fail To Connect Google"
                 Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
             Else
-                varInfo = "自由上网成功" & vbNewLine & "Google延迟:" & varPingReply & "Ms,请使用Https访问Google"
+                varInfo = "Success" & vbNewLine & "Latency:" & varPingReply & "Ms"
                 Me.Invoke(New subLabelDelegate(AddressOf SetInfo), varInfo)
             End If
 
@@ -132,6 +131,6 @@ Public Class formMain
     End Sub
 
     Private Sub Label_Click(sender As Object, e As EventArgs) Handles Label.Click
-        System.Diagnostics.Process.Start("https://github.com/Observateurs/LibertyHosts/releases")
+        Process.Start("https://github.com/xAsiimov/LibertyHosts/releases")
     End Sub
 End Class
