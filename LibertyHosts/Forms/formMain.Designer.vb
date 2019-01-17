@@ -41,7 +41,7 @@ Partial Class formMain
         Me.GetHostsButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.GetHostsButton.ForeColor = System.Drawing.Color.Black
         Me.GetHostsButton.Location = New System.Drawing.Point(20, 381)
-        Me.GetHostsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GetHostsButton.Margin = New System.Windows.Forms.Padding(4)
         Me.GetHostsButton.Name = "GetHostsButton"
         Me.GetHostsButton.Size = New System.Drawing.Size(273, 76)
         Me.GetHostsButton.TabIndex = 3
@@ -54,7 +54,7 @@ Partial Class formMain
         Me.CheckHostsButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.CheckHostsButton.ForeColor = System.Drawing.Color.Black
         Me.CheckHostsButton.Location = New System.Drawing.Point(314, 381)
-        Me.CheckHostsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckHostsButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckHostsButton.Name = "CheckHostsButton"
         Me.CheckHostsButton.Size = New System.Drawing.Size(273, 76)
         Me.CheckHostsButton.TabIndex = 4
@@ -67,7 +67,7 @@ Partial Class formMain
         Me.ToolBoxButton.Font = New System.Drawing.Font("DengXian", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ToolBoxButton.ForeColor = System.Drawing.Color.Black
         Me.ToolBoxButton.Location = New System.Drawing.Point(608, 381)
-        Me.ToolBoxButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ToolBoxButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ToolBoxButton.Name = "ToolBoxButton"
         Me.ToolBoxButton.Size = New System.Drawing.Size(273, 76)
         Me.ToolBoxButton.TabIndex = 5
@@ -92,7 +92,7 @@ Partial Class formMain
         '
         Me.PictureBox1.Image = Global.LibertyHosts.My.Resources.Resources.GoogleLogo
         Me.PictureBox1.Location = New System.Drawing.Point(244, 104)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(272, 92)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -103,7 +103,7 @@ Partial Class formMain
         '
         Me.MinimizeButton.Image = Global.LibertyHosts.My.Resources.Resources.MinimizeW
         Me.MinimizeButton.Location = New System.Drawing.Point(752, 0)
-        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimizeButton.Name = "MinimizeButton"
         Me.MinimizeButton.Size = New System.Drawing.Size(50, 40)
         Me.MinimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -114,7 +114,7 @@ Partial Class formMain
         '
         Me.CloseButton.Image = Global.LibertyHosts.My.Resources.Resources.CloseW
         Me.CloseButton.Location = New System.Drawing.Point(826, 0)
-        Me.CloseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CloseButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(50, 40)
         Me.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -123,8 +123,7 @@ Partial Class formMain
         '
         'formMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(897, 492)
         Me.Controls.Add(Me.Label)
@@ -136,7 +135,7 @@ Partial Class formMain
         Me.Controls.Add(Me.CloseButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "formMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Liberty Hosts"
